@@ -9,6 +9,15 @@
  */
 public class LinkedListTest {
 	public static void main (String[] args) {
+		MemorySpace memorySpace = new MemorySpace(100);
+        String expectedText = "(20 , 80) \n(0 , 20) ";
+        String expected = "true";
+        String actual = "";
+
+            int address = memorySpace.malloc(20);
+			System.out.println(memorySpace.toString());
+            actual += (address == 0 && memorySpace.toString().equals(expectedText));
+            
 		MemorySpace m = new MemorySpace(1000);
 		System.out.println(m + "\n");
 		//// Expected output:
